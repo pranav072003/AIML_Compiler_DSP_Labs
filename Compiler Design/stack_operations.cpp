@@ -26,6 +26,7 @@ class Stack
             pointer++;
             stack[pointer]=a;
             cout<<"Pushed!\n";
+            cout<<"Top of the stack is currently "<<stack[pointer]<<"\n";
         }
         
         void pop()
@@ -37,6 +38,12 @@ class Stack
             }
             pointer--;
             cout<<"Popped\n";
+            if(pointer==-1)
+            {
+                cout<<"Stack has been emptied\n";
+                return;
+            }
+            cout<<"Top of the stack is currently "<<stack[pointer]<<"\n";
         }
         
         void display()
@@ -51,7 +58,7 @@ class Stack
             {
                 cout<<stack[i]<<"\t";
             }
-            cout<<"\n";
+            cout<<"<---TOP\t"<<"\n";
         }
 };
 
